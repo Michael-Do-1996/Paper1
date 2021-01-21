@@ -33,4 +33,4 @@ all_data_combined <- full_join(all_data_combined,all_data$`Nov 2018 `)
 all_data_combined <- full_join(all_data_combined,all_data$`Dec 2018 `)
 
 #### Save data ####
-write_csv()
+write_csv(all_data_combined, "inputs/data/raw_data.csv")
