@@ -41,18 +41,18 @@ toronto_delay$`Report Date`<- as.character((toronto_delay$`Report Date`)) #chang
 toronto_delay <-
   toronto_delay %>% #mutated values to show only the month instead of full dates
   mutate(`Report Date` = case_when(
-    str_detect(`Report Date`, "2018-01") ~ "01",
-    str_detect(`Report Date`, "2018-02") ~ "02",
-    str_detect(`Report Date`, "2018-03") ~ "03",
-    str_detect(`Report Date`, "2018-04") ~ "04",
-    str_detect(`Report Date`, "2018-05") ~ "05",
-    str_detect(`Report Date`, "2018-06") ~ "06",
-    str_detect(`Report Date`, "2018-07") ~ "07",
-    str_detect(`Report Date`, "2018-08") ~ "08",
-    str_detect(`Report Date`, "2018-09") ~ "09",
-    str_detect(`Report Date`, "2018-10") ~ "10",
-    str_detect(`Report Date`, "2018-11") ~ "11",
-    str_detect(`Report Date`, "2018-12") ~ "12",
+    str_detect(`Report Date`, "2018-01") ~ "Jan",
+    str_detect(`Report Date`, "2018-02") ~ "Feb",
+    str_detect(`Report Date`, "2018-03") ~ "Mar",
+    str_detect(`Report Date`, "2018-04") ~ "Apr",
+    str_detect(`Report Date`, "2018-05") ~ "May",
+    str_detect(`Report Date`, "2018-06") ~ "June",
+    str_detect(`Report Date`, "2018-07") ~ "July",
+    str_detect(`Report Date`, "2018-08") ~ "Aug",
+    str_detect(`Report Date`, "2018-09") ~ "Sept",
+    str_detect(`Report Date`, "2018-10") ~ "Oct",
+    str_detect(`Report Date`, "2018-11") ~ "Nov",
+    str_detect(`Report Date`, "2018-12") ~ "Dec",
     TRUE ~ `Report Date`
   ))
 

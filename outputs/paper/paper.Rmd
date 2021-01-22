@@ -25,13 +25,9 @@ library(tidyverse)
 # Data
 
 ```{r}
-test %>%  
-  ggplot(aes(x = Route)) +
-  geom_bar(stat = "count") +
-   scale_y_continuous(
-        name = "Axis in thousands",
-        labels = function(x) x / 1000
-  )
+toronto_delay %>%  
+  ggplot(aes(x =`Report Date`)) +
+  geom_bar(stat = "count")
 ```
 
 
